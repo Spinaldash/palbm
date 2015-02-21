@@ -1,1 +1,1 @@
-# hapi-prototype
+# Photo-album

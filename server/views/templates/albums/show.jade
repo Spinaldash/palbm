@@ -1,0 +1,20 @@
+extends ../../layouts/master
+block content
+  .lead
+    h2 Show Album
+    h4=album.name
+    h4=album.date
+    .form-inline
+      a.form-group.btn.btn-warning(href='/albums/#{album._id}/edit') Edit
+      a.form-group.btn.btn-primary(href='/albums/#{album._id}/add') Add
+  .container-fluid
+    .row
+      each photo,i in album.photos
+        .col-xs-4
+          form(method='post', action='/albums/#{album._id}/purge')
+            input(type='hidden', name='picDelete', value=i)
+            button.btn.btn-danger.innerBtn(type='submit') Delete
+          form(method='post', action='/albums/#{album._id}/favorite')
+            input(type='hidden', name='picFavorite', value=i)
+            button.btn.btn-info.innerBtnTwo(type='submit') Favorite
+          img(src=photo, style='height: 400px; width: 400px;')

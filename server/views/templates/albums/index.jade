@@ -1,0 +1,20 @@
+extends ../../layouts/master
+block content
+  .lead.text-center
+    h2 Albums
+    a.btn.btn-primary(href='/albums?sort=-1') Sort Descending
+    a.btn.btn-info(href='/albums/new') Add New Album
+    a.btn.btn-success(href='/albums?sort=1') Sort Ascending
+  #albums
+      .container-fluid
+        .row
+          each album in albums 
+            .col-xs-4 
+              .panel.panel-primary
+                .panel-heading
+                  a.panel-text.lead(href='/albums/#{album._id}')= album.name
+                .panel-body
+                  if album.photos[album.favorite]
+                    img.img-rounded.text-center.sleek(src=album.photos[album.favorite])
+                    p=album.date
+                  

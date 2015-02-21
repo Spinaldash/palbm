@@ -1,0 +1,11 @@
+extends ../../layouts/master
+block content
+  .lead
+    h2 Edit Album
+
+    form(method='post', action='/albums/#{album._id}')
+      label Name
+      input(type='text', name='name', value=album.name)
+      label Date
+      input(type='date', name='date', value=album.date)
+      button.btn.btn-success(type='submit') Edit Album

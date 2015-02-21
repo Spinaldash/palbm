@@ -1,0 +1,9 @@
+extends ../../layouts/master
+block content
+  .lead
+    h2 Add Photos
+
+    form(method='post', action='/albums/#{album._id}/add', enctype='multipart/form-data')
+      label Photos
+      input(type='file', name='photos', multiple=true)
+      button.btn.btn-success(type='submit') Add Photos

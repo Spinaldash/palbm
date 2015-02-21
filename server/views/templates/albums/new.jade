@@ -1,0 +1,12 @@
+extends ../../layouts/master
+block content
+  h3.lead Create Album
+  
+  form(method='post', action='/albums', enctype='multipart/form-data')
+    label Name
+    input(type='text', name='name')
+    label Date
+    input(type='date', name='date')
+    label Photos
+    input(type='file', name='photos', multiple=true)
+    button.btn.btn-success(type='submit') Add Album
