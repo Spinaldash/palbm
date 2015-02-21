@@ -1,7 +1,7 @@
 {
-  "name": "hapi-prototype",
-  "description": "Hapi Prototype Application",
-  "homepage": "https://github.com/coding-house-jan2015/hapi-prototype",
+  "name": "palbm",
+  "description": "MJ's Photo Corner",
+  "homepage": "https://github.com/Spinaldash/palbm",
   "engines": {
     "node": "0.12.x"
   },
@@ -15,10 +15,10 @@
     "mongo",
     "mongoose"
   ],
-  "author": "Chyld Medford <chyld.medford@gmail.com>",
+  "author": "Michael J. Perez <blueavenger@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git://github.com/coding-house-jan2015/hapi-prototype.git"
+    "url": "git://github.com/Spinaldash/palbm.git"
   },
   "version": "1.0.0",
   "scripts": {
