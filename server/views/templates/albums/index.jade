@@ -2,9 +2,9 @@ extends ../../layouts/master
 block content
   .lead.text-center
     h2 Albums
-    a.btn.btn-primary(href='/albums?sort=-1') Sort Descending
+    a.btn.btn-primary(href='/albums?sort=-1') Sort Ascending
     a.btn.btn-info(href='/albums/new') Add New Album
-    a.btn.btn-success(href='/albums?sort=1') Sort Ascending
+    a.btn.btn-success(href='/albums?sort=1') Sort Descending
   #albums
       .container-fluid
         .row
