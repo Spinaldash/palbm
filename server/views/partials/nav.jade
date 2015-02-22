@@ -10,4 +10,13 @@ nav.navbar.navbar-default
     #navbar.collapse.navbar-collapse
       ul.nav.navbar-nav.navbar-right
         li.active: a(href='/'): i.fa.fa-home &nbsp; Home
-        li.active: a(href='/albums'): i.fa.fa-camera-retro.fa-spin &nbsp; Photo Album
+        if email
+          li.active: a(href='/albums'): i.fa.fa-camera-retro.fa-spin &nbsp; Albums
+          li.active: a(href='#')= email || 'anonymous'
+          li.active
+            form.btn.btn-warning(method='post', action='/logout')
+              button Logout
+        else
+          li.active: a(href='/register'): i.fa.fa-pencil &nbsp; Register
+          li.active: a(href='/login'): i.fa.fa-sliders &nbsp; Login
+          
