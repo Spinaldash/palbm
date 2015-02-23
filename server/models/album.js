@@ -12,7 +12,7 @@ var albumSchema = mongoose.Schema({
   createdAt: {type: Date, default: Date.now, required: true},
   photos: [String],
   favorite: {type: Number, default: 0},
-  userID: {type: mongoose.Schema.ObjectId, ref: 'User'}
+  userId: {type: mongoose.Schema.ObjectId, ref: 'User'}
 });
 
 albumSchema.methods.upload = function(photos, cb) {

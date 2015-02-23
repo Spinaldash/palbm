@@ -7,7 +7,7 @@ module.exports = {
     if (request.query.sort) {
       sortQ = request.query.sort;
     }
-    Album.find({}).sort({date: sortQ}).exec(function(err, albums) {
+    Album.find({userId:request.auth.credentials._id}).sort({date: sortQ}).exec(function(err, albums) {
       reply.view('templates/albums/index', {path: '/albums', albums:albums});
     })
   }
